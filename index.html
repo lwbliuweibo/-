@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+
+
+    <title>舟道-创新者</title>
+    <script type="text/javascript">
+        $(function () {
+            function setMainSectionStyle() {
+                var intWindowHeight = $(window).height();
+                var intTopHeight = $(".header-nav").height();
+                $(".main").height(intWindowHeight - intTopHeight);
+            }
+            setMainSectionStyle();
+
+            $(window).resize(function () {
+                setMainSectionStyle();
+            });
+        });
+    </script>
+    <style type="text/css">
+        .main {
+            width: 100%;
+            height: auto;
+        }
+
+        img {
+            border: 0px;
+        }
+    </style>
+
+    <style>
+        .darkcolor {
+            background-color: #000;
+            animation: darkcolor 2s ease-out forwards;
+            -webkit-animation: darkcolor 2s ease-out forwards;
+        }
+    </style>
+
+</head>
+<body>
+<div class="maincontainer">
+    <div class="topnav">
+        <!--导航菜单开始-->
+
+        <div class="header-nav nonecolor">
+
+
+            <div class="loge-title">
+                <a href="/home"><img src="/Content/images/logo.png" /></a><p>舟道科技</p>
+            </div>
+            <ul class="list menu-pc ">
+                <li><a href="/home">首页</a></li>
+                <li><a href="javascript:void(0)" id="product">产品</a></li>
+                <li><a href="/RealTime">新闻中心</a></li>
+                <li><a href="/Contactus">联系我们</a></li>
+                <li><a href="/aboutus">关于</a></li>
+            </ul>
+            <div class="list2-box">
+                <div class="list2-list">
+                    <div class="list-Innovator list2"><a href="/Innovator">创新者</a></div>
+                    <div class="list-StartUp list2"><a href="/StartUp">创业者</a></div>
+                    <div class="list-Founder list2"><a href="/Founder">双创平台</a></div>
+                </div>
+            </div>
+            <div class="menu-mobile wcolor">
+                <span class="icon-reorder"></span>
+            </div>
+            <div class="mlist wcolor hide">
+                <a class="wcolor" href="/home">首页</a>
+                <a class="wcolor" href="/Innovator">创新平台</a>
+                <a class="wcolor" href="/StartUp">创业者</a>
+                <a class="wcolor" href="/Founder">双创平台</a>
+                <a class="wcolor" href="/RealTime">新闻中心</a>
+                <a class="wcolor" href="/Contactus">联系我们</a>
+                <a class="wcolor" href="/aboutus">关于</a>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(window).ready(listBox());
+                $(window).resize(function () {
+                    listBox();
+                });
+            });
+            $(window).ready(function () {
+                $(".list2-list").hide();
+                $("#product").on('click', function () {
+
+                    $(".list2-list").toggle(500);
+                });
+            });
+            $(".icon-reorder").click(function () {
+                $('.mlist').toggle(1000);
+            })
+
+
+            function listBox() {
+                var windowW = $(window).width();
+                if (windowW < 670) {
+                    $(".list2-box").css("display", "none")
+                }
+            }
+
+            addEvent(window, 'scroll', onScroll);
+
+            function onScroll() {
+                var w = $(window).scrollTop();
+                var wh = $(window).height();
+                if (w >= wh * 0.3) {
+                    $('.nonecolor').addClass('darkcolor');
+                }
+                if (w <= wh * 0.3) {
+                    $('.nonecolor').removeClass('darkcolor');
+                }
+            }
+            function addEvent(eventTarget, eventType, eventHandler) {
+                if (eventTarget.addEventListener) {
+                    eventTarget.addEventListener(eventType, eventHandler, false);
+                } else {
+                    if (eventTarget.attachEvent) {
+                        eventType = "on" + eventType;
+                        eventTarget.attachEvent(eventType, eventHandler);
+                    } else {
+                        eventTarget["on" + eventType] = eventHandler;
+                    }
+                }
+            }
+
+        </script>
+
+        <!--导航菜单结束-->
+    </div>
+    <div class="main">
+
+
+
+
+
+
+        <main class="cx-main-content">
+            <div class="cx-fixed-bg cx-bg-1">
+                <div class="bottom">
+                    <div class="p">
+                        <span class="span1">创新者</span><span class="span2">Innovator</br>——"授人以渔"的创新思维教学解决方案</span></br></br>
+
+                        历时六年探索优化的全国首家混合式创新思维课程</br>改变传统课堂的教学模式</br>
+                        实现以自主学习能力培养为核心的翻转课堂
+
+                        <img class="In_bottom_img" src="/Content/images/In_bottom.png" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cx-fixed-bg cx-bg-2">
+                <div class="cxtoppic2">
+                    <img src="/Content/images/cxtoppic2.png" />
+                </div>
+
+            </div> <!-- cx-fixed-bg -->
+            <div class="cx-fixed-bg cx-bg-3">
+
+
+
+            </div>
+            <!-- cx-scrolling-bg -->
+            <div class="cx-scrolling-bg cx-color-1">
+                <div class="cx-container">
+                    <div class="cxtoppic3">
+                        <img src="/Content/images/cxtoppic3.png" />
+                    </div>
+                </div> <!-- cx-container -->
+            </div> <!-- cx-scrolling-bg -->
+            <div class="cx-fixed-bg cx-bg-4">
+                <div class="cxtoppic4">
+                    <img src="/Content/images/cxtoppic4.png" />
+                </div>
+            </div>
+            <div class="cx-scrolling-bg cx-color-2">
+                <div class="cx-container">
+
+                </div> <!-- cx-container -->
+            </div> <!-- cx-scrolling-bg -->
+            <div class="cx-fixed-bg cx-bg-5">
+
+                <div class="cxtoppic5">
+                    <img src="/Content/images/cxtoppic5.png" />
+
+                </div>
+
+            </div>
+            <script>
+                var windowH = $(window).height();
+                $('.cx-fixed-bg').height(windowH);</script>
+        </main> <!-- cx-main-content -->
+    </div>
+</div>
+
+</body>
+</html>
